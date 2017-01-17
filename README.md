@@ -10,7 +10,7 @@
 
 npm start o node server.js
 
-## Uso de GIT
+### Uso de GIT
 
 ####Clonar el proyecto
 git clone https://github.com/gabporres22/testApp.git
