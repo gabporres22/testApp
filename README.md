@@ -54,3 +54,17 @@ git pull
 git fetch --all
 git reset --hard origin/master
 ```
+
+###Actualizacion de dependencias del proyecto
+
+####Agregar un modulo Node (para el backend)
+```
+npm install --save nombre_modulo
+```
+
+####Agregar una dependencia Bower (para el frontend)
+```
+bower install --save nombre_dependencia
+```
+
+En ambos se actualizan los archivos package.json (backend) y bower.json (frontend)
