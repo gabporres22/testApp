@@ -26,10 +26,12 @@ app.use('/api', router);
 
 router.route('/clientes')
     .get(clienteController.obtenerClientes)
-    .put(clienteController.modificarCliente)
-    .post(clienteController.nuevoCliente);
+    .post(clienteController.nuevoCliente)
+    .put(clienteController.modificarCliente);
 
-router.route('/clientes/:idCliente').delete(clienteController.bajaCliente);
+router.route('/clientes/:idCliente')
+    .get(clienteController.obtenerCliente)
+    .delete(clienteController.bajaCliente);
 
 // Use environment defined port or 3000
 var port = process.env.PORT || 3000;

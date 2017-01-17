@@ -30,11 +30,33 @@ module.exports = {
     },
 
     bajaCliente : function(id, callback){
-
+        Cliente.findByIdAndRemove(id, function(err, response) {
+            if(err) {
+                callback(err, null);
+            } else {
+                callback(null, response);
+            }
+        });
     },
 
-    modificacionCliente : function(id, cliente, callback){
+    modificacionCliente : function(cliente, callback){
+        Cliente.findByIdAndUpdate(cliente.id, cliente, function(error, response){
+            if(error){
+                callback(error, null);
+            }else{
+                callback(null, response);
+            }
+        });
+    },
 
+    obtenerCliente : function(id, callback){
+        Cliente.findById(id, function(error, response){
+            if(error){
+                callback(error, null);
+            }else{
+                callback(null, response);
+            }
+        });
     },
 
     listaClientes : function(callback){
