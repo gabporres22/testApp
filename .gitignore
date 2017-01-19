@@ -1,7 +1,6 @@
 .bower-cache/
 .bower-registry/
 .bower-tmp/
-.bowerrc
 .idea/
 node_modules/
 public/js/vendor
