@@ -1,11 +1,19 @@
-angular.module('appTest', ['ngMaterial', 'md.data.table', 'ngMdIcons']).controller('MyController', function($scope, $http){
-    $scope.cargarClientes = function () {
-        $http.get('api/clientes').then(function(response){
-            $scope.listaClientes = response.data.data;
-        }).catch(function(responseError){
-            alert(responseError);
-        });
-    };
+angular.module('appTest', ['ngMaterial', 'md.data.table', 'ngMdIcons', 'material.components.eventCalendar', 'ui.router']);
 
-    $scope.cargarClientes();
+angular.module('appTest').config(function($urlRouterProvider, $stateProvider) {
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('site', {
+        'abstract': true,
+        views : {
+            'header@': {
+                templateUrl: 'js/app/views/header/header.html',
+                controller: 'HeaderController'
+            }
+        }
+    });
+});
+
+angular.module('appTest').run(function($state){
+    $state.go('calendarioTurnos');
 });

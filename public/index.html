@@ -7,50 +7,13 @@
     <link rel="stylesheet" href="js/vendor/angular-material/angular-material.css" type="text/css">
     <link rel="stylesheet" href="js/vendor/angular-material-data-table/dist/md-data-table.css" type="text/css"/>
     <link rel="stylesheet" href="js/vendor/angular-material-icons/angular-material-icons.css" type="text/css">
+    <link rel="stylesheet" href="js/vendor/angular-material-event-calendar/dist/angular-material-event-calendar.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body ng-app="appTest" ng-controller="MyController">
-    <md-content layout="row" id="mainController" layout-fill>
-        <div flex layout="column">
-            <md-table-container>
-                <table md-table md-progress="promise">
-                    <thead md-head>
-                    <tr md-row>
-                        <th md-column md-text>Nombre</th>
-                        <th md-column md-text>Apellido</th>
-                        <th md-column md-text>Email</th>
-                        <th md-column md-text>Telefono</th>
-                        <th md-column=""></th>
-                    </tr>
-                    </thead>
-                    <tbody md-body>
-                    <tr md-row ng-repeat="cliente in listaClientes">
-                        <td md-cell>{{cliente.nombre}}</td>
-                        <td md-cell>{{cliente.apellido}}</td>
-                        <td md-cell>{{cliente.email}}</td>
-                        <td md-cell>{{cliente.telefonoMovil}} | {{cliente.telefonoFijo}}</td>
-                        <td md-cell>
-                            <md-button class="md-fab md-mini md-primary">
-                                <ng-md-icon icon="edit"/>
-                            </md-button>
-                            <md-button class="md-fab md-mini md-primary">
-                                <ng-md-icon icon="delete"/>
-                            </md-button>
-                            <md-button class="md-fab md-mini md-primary">
-                                <ng-md-icon icon="visibility"/>
-                            </md-button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </md-table-container>
+<body ng-app="appTest">
+    <div ui-view="header"></div>
 
-            <md-content>
-                Existen <b>{{listaClientes.length}}</b> clientes registrados
-                <md-button class="md-raised md-primary">Agregar cliente</md-button>
-            </md-content>
-        </div>
-
-    </md-content>
+    <div ui-view="content"></div>
 
     <script src="js/vendor/angular/angular.js"></script>
     <script src="js/vendor/angular-animate/angular-animate.js"></script>
@@ -59,7 +22,14 @@
     <script src="js/vendor/angular-material/angular-material.js"></script>
     <script src="js/vendor/angular-material-data-table/dist/md-data-table.js"></script>
     <script src="js/vendor/angular-material-icons/angular-material-icons.js"></script>
+    <script src="js/vendor/angular-material-event-calendar/dist/angular-material-event-calendar.js"></script>
+    <script src="js/vendor/angular-ui-router/release/angular-ui-router.js"></script>
 
     <script src="js/app/app.js"></script>
+
+    <script src="js/app/views/header/header.js"></script>
+
+    <script src="js/app/views/login/login.js"></script>
+    <script src="js/app/views/calendario/calendarioTurnos.js"></script>
 </body>
 </html>
