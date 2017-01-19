@@ -4,8 +4,46 @@
             <span>Aplicacion de prueba MEAN (MongoDB + Express + AngularJS + NodeJS)</span>
         </h2>
         <span flex></span>
-        <md-button class="md-fab md-mini" aria-label="Favorite" ng-click="login()">
+        <md-button class="md-fab md-mini" aria-label="Favorite" ng-click="showDialog($event)"">
             <ng-md-icon icon="login"></ng-md-icon>
         </md-button>
     </div>
 </md-toolbar>
+
+<script type="text/ng-template" id="login-dialog.template.html">
+    <md-dialog id="login-dialog" aria-label="Login" ng-cloak>
+        <form name="loginForm" ng-submit="login()">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Login de la app</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="close()">
+                        <ng-md-icon icon="close"></ng-md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <md-dialog-content>
+                <div class="md-dialog-content">
+                    <md-input-container class="md-block">
+                        <label>Username</label>
+                        <input name="username" ng-model="dialog.username" md-autofocus required />
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>Password</label>
+                        <input type="password" name="password" ng-model="dialog.password" required />
+                    </md-input-container>
+                </div>
+            </md-dialog-content>
+
+            <md-dialog-actions layout="col">
+                <md-button ng-disabled="loginForm.$invalid" class="md-raised md-primary" ng-click="forgotPassword()">Forgot Password?</md-button>
+                <md-button ng-disabled="loginForm.$invalid" class="md-raised md-primary" ng-click="signin()">Signin</md-button>
+
+                <span flex="50"></span>
+
+                <md-button type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary">Login</md-button>
+            </md-dialog-actions>
+        </form>
+    </md-dialog>
+</script>
