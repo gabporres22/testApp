@@ -6,7 +6,7 @@ var clienteController = require('./server/controllers/clienteController.js');
 var usuarioController = require('./server/controllers/usuarioController.js');
 
 // Connect to the beerlocker MongoDB
-mongoose.connect('mongodb://localhost:27017/turnos');
+mongoose.connect('mongodb://heroku_mvr0p9mg:heroku_mvr0p9mg@ds117839.mlab.com:17839/heroku_mvr0p9mg');
 
 // Create our Express application
 var app = express();
