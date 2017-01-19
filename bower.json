@@ -3,7 +3,7 @@
   "version": "0.1",
   "directory": "public/js/vendor",
   "dependencies": {
-    "angular": "1.4.7",
+    "angular": "~1.6.1",
     "jquery": "^3.1.1",
     "angular-material": "^1.1.1",
     "angular-material-data-table": "^0.10.10",
