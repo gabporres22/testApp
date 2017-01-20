@@ -8,7 +8,10 @@
     "angular-material": "^1.1.1",
     "angular-material-data-table": "^0.10.10",
     "angular-material-icons": "^0.7.1",
-    "angular-material-event-calendar": "^0.1.2",
-    "angular-ui-router": "^0.4.0"
+    "angular-ui-router": "^0.4.0",
+    "angular-material-expansion-panel": "^0.7.1",
+    "material-calendar": "^0.2.14",
+    "angular-sanitize": "^1.6.1",
+    "angular-i18n": "^1.6.1"
   }
 }

@@ -1,4 +1,4 @@
-angular.module('appTest', ['ngMaterial', 'md.data.table', 'ngMdIcons', 'material.components.eventCalendar', 'ui.router']);
+angular.module('appTest', ['ngMaterial', 'md.data.table', 'ngMdIcons', 'materialCalendar', 'material.components.expansionPanels', 'ui.router']);
 
 angular.module('appTest').config(function($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');
