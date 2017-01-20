@@ -4,6 +4,10 @@ angular.module('appTest').controller("HeaderController", function($scope, $state
     };
 
     function DialogController($scope, $mdDialog) {
+		$scope.close = function(){
+			$mdDialog.close();
+		};
+		
         $scope.forgotPassword = function() {
             $mdDialog.hide();
         };
